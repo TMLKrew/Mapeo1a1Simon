@@ -94,7 +94,7 @@ public class PuertoDAO implements IPuertoDAO{
     }
 
    @Override
-    public Puerto getOne(int pk) {
+    public Puerto getOne(Long pk) {
         Puerto puerto = new Puerto();
         Session sesion = null;
         try {

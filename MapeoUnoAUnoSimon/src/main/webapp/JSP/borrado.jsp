@@ -20,7 +20,7 @@
                     <c:forEach var="item" items="${listado}">
                         <tr>
                             <td><input type="radio" name="registro" value="${item.id}" /></td>
-                            <td>${item.servicio.nombre} ${item.servicio.path}</td>
+                            <td>${item.servicio.nombre} ${item.servicio.path} ${item.numero} ${item.tipo}</td>
                         </tr>
                     </c:forEach>
                     <tr>

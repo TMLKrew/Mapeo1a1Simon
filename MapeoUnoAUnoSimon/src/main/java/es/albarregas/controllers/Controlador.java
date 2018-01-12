@@ -4,7 +4,6 @@ import es.albarregas.beans.Puerto;
 import es.albarregas.daofactory.DAOFactory;
 import es.albarregas.beans.Servicio;
 import es.albarregas.dao.IPuertoDAO;
-import es.albarregas.dao.IServicioDAO;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
@@ -56,12 +55,12 @@ public class Controlador extends HttpServlet {
             case "delete":
 //                profesor = adao.getOne(Integer.parseInt(request.getParameter("registro")));
 //                adao.delete(profesor);
-                puerto = sdao.getOne(Integer.parseInt(request.getParameter("registro")));
+                puerto = sdao.getOne(Long.parseLong(request.getParameter("registro")));
                 sdao.delete(puerto);
                 url = "index.html";
                 break;
             case "update":
-                puerto = sdao.getOne(Integer.parseInt(request.getParameter("registro")));
+                puerto = sdao.getOne(Long.parseLong(request.getParameter("registro")));
                 request.setAttribute("puerto", puerto);
                 url = "JSP/formularioActualizar.jsp";
                 break;

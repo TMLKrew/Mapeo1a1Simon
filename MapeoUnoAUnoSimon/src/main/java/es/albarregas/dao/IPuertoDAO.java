@@ -16,7 +16,7 @@ public interface IPuertoDAO {
     
     public void add(Puerto puerto);
     public List<Puerto> get();
-    public Puerto getOne(int pk);
+    public Puerto getOne(Long pk);
     public void update(Puerto puerto);
     public void delete(Puerto puerto);
 
